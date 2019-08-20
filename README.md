@@ -15,7 +15,8 @@ This package is intended to be wrapped by other TYPO3 extensions like
 [bnf/slim-typo3](https://packagist.org/packages/bnf/slim-typo3)
 in order to provide PSR-17 factories in a PSR-7/PSR-15 request handler context.
 
-### Usage in a custom wrapper extension
+<details>
+  <summary>Usage in a custom wrapper extension</summary>
 
 If you want to wrap this packages in an own TYPO3 extension, you need to
 specify the interface mappings for the TYPO3 dependency injection containers.
@@ -52,3 +53,4 @@ Psr\Http\Message\UploadedFileFactoryInterface:
 Psr\Http\Message\UriFactoryInterface:
   alias: Bnf\Typo3HttpFactory\UriFactory
 ```
+</details>
