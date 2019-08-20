@@ -2,7 +2,7 @@
 
 ## Installation
 
-To use this packages, install
+To use this package, install
 [bnf/typo3-http-factory](https://packagist.org/packages/bnf/typo3-http-factory)
 using [Composer](https://getcomposer.org/):
 
@@ -10,7 +10,7 @@ using [Composer](https://getcomposer.org/):
 composer require bnf/typo3-http-factory
 ```
 
-Note, this is *pure* composer package, and not a full-fledged TYPO3 extension.
+Note, this is a *pure* composer package – not a full-fledged TYPO3 extension.
 This package is intended to be wrapped by other TYPO3 extensions like
 [bnf/slim-typo3](https://packagist.org/packages/bnf/slim-typo3)
 in order to provide PSR-17 factories in a PSR-7/PSR-15 request handler context.
