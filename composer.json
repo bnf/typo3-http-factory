@@ -1,0 +1,33 @@
+{
+    "name": "bnf/typo3-http-factory",
+    "description": "PSR-17 HTTP message factories for the TYPO3 PSR-7 implementation",
+    "license": "GPL-2.0+",
+    "keywords": ["psr-7", "psr-17"],
+    "authors": [
+        {
+            "name": "Benjamin Franzke",
+            "email": "benjaminfranzke@gmail.com",
+            "role": "Developer",
+            "homepage": "https://bnfr.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "psr/http-message": "^1.0",
+        "psr/http-factory": "^1.0",
+        "typo3/cms-core": "^8.7 || ^9.5 || ~10.0.0"
+    },
+    "provide": {
+        "psr/http-factory-implementation": "1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bnf\\Typo3HttpFactory\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bnf\\Typo3HttpFactory\\Tests\\": "tests/"
+        }
+    }
+}
