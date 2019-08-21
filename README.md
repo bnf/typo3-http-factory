@@ -28,7 +28,7 @@ For TYPO3 v8/v9 you may provide configuration for the Extbase ObjectManager in
 $container = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\Container\Container::class);
 $container->registerImplementation(\Psr\Http\Message\RequestFactoryInterface::class, \Bnf\Typo3HttpFactory\RequestFactory::class);
 $container->registerImplementation(\Psr\Http\Message\ResponseFactoryInterface::class, \Bnf\Typo3HttpFactory\ResponseFactory::class);
-$container->registerImplementation(\Psr\Http\Message\ServerResponseFactoryInterface::class, \Bnf\Typo3HttpFactory\ServerRequestFactory::class);
+$container->registerImplementation(\Psr\Http\Message\ServerRequestFactoryInterface::class, \Bnf\Typo3HttpFactory\ServerRequestFactory::class);
 $container->registerImplementation(\Psr\Http\Message\StreamFactoryInterface::class, \Bnf\Typo3HttpFactory\StreamFactory::class);
 $container->registerImplementation(\Psr\Http\Message\UploadedFileFactoryInterface::class, \Bnf\Typo3HttpFactory\UploadedFileFactory::class);
 $container->registerImplementation(\Psr\Http\Message\UriFactoryInterface::class, \Bnf\Typo3HttpFactory\UriFactory::class);
@@ -44,7 +44,7 @@ Psr\Http\Message\RequestFactoryInterface:
   alias: Bnf\Typo3HttpFactory\RequestFactory
 Psr\Http\Message\ResponseFactoryInterface:
   alias: Bnf\Typo3HttpFactory\ResponseFactory
-Psr\Http\Message\ServerResponseFactoryInterface:
+Psr\Http\Message\ServerRequestFactoryInterface:
   alias: Bnf\Typo3HttpFactory\ServerRequestFactory
 Psr\Http\Message\StreamFactoryInterface:
   alias: Bnf\Typo3HttpFactory\StreamFactory
