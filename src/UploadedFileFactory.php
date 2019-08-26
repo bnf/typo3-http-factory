@@ -2,9 +2,9 @@
 declare(strict_types=1);
 namespace Bnf\Typo3HttpFactory;
 
+use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UploadedFileFactoryInterface;
 use Psr\Http\Message\UploadedFileInterface;
-use Psr\Http\Message\StreamInterface;
 use TYPO3\CMS\Core\Http\UploadedFile;
 
 final class UploadedFileFactory implements UploadedFileFactoryInterface
