@@ -10,7 +10,7 @@ final class StreamFactory implements StreamFactoryInterface
 {
     public function createStream(string $content = ''): StreamInterface
     {
-        $stream = new Stream('php://temp');
+        $stream = new Stream('php://temp', 'r+');
         if ($content !== '') {
             $stream->write($content);
         }
