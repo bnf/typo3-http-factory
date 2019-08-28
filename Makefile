@@ -1,6 +1,6 @@
-.PHONY: check lint stan
+.PHONY: check lint stan phpcs phpunit
 
-check: lint phpcs stan
+check: lint phpcs stan phpunit
 
 vendor/autoload.php: composer.json
 	rm -rf composer.lock vendor/
@@ -14,3 +14,6 @@ stan: vendor/autoload.php
 
 phpcs: vendor/autoload.php
 	vendor/bin/phpcs
+
+phpunit: vendor/autoload.php
+	vendor/bin/phpunit
