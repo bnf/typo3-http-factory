@@ -6,6 +6,7 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 use TYPO3\CMS\Core\Http\Request;
+use TYPO3\CMS\Core\Http\Stream;
 
 final class RequestFactory implements RequestFactoryInterface
 {
@@ -15,6 +16,7 @@ final class RequestFactory implements RequestFactoryInterface
      */
     public function createRequest(string $method, $uri): RequestInterface
     {
-        return new Request($uri, $method);
+        $stream = new Stream('php://temp', 'r+');
+        return new Request($uri, $method, $stream);
     }
 }
