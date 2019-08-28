@@ -112,6 +112,7 @@ class StreamFactoryTest extends TestCase
     public function testCreateStreamFromFileWithInvalidMode()
     {
         $fileName = self::TEMP_FILE;
+        touch($fileName);
 
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionCode(1566823434);
