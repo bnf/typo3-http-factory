@@ -1,5 +1,9 @@
 # PSR-17 HTTP message factories for TYPO3
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bnf/typo3-http-factory/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bnf/typo3-http-factory/?branch=master)
+[![Build Status](https://api.travis-ci.org/bnf/typo3-http-factory.png?branch=master)](https://travis-ci.org/bnf/typo3-http-factory)
+[![Coverage Status](https://coveralls.io/repos/github/bnf/typo3-http-factory/badge.svg)](https://coveralls.io/github/bnf/typo3-http-factory)
+
 ## Installation
 
 To use this package, install
