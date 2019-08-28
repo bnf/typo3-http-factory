@@ -19,7 +19,7 @@ final class UploadedFileFactory implements UploadedFileFactoryInterface
         if ($size === null) {
             $size = $stream->getSize();
             if ($size === null) {
-                throw new \InvalidArgumentException('Stream size could not be determined.');
+                throw new \InvalidArgumentException('Stream size could not be determined.', 1566823423);
             }
         }
 

@@ -22,10 +22,10 @@ final class StreamFactory implements StreamFactoryInterface
         $resource = @fopen($filename, $mode);
         if ($resource === false) {
             if ($mode === '' || in_array($mode[0], ['r', 'w', 'a', 'x', 'c'], true) === false) {
-                throw new \InvalidArgumentException('The mode ' . $mode . ' is invalid.');
+                throw new \InvalidArgumentException('The mode ' . $mode . ' is invalid.', 1566823434);
             }
 
-            throw new \RuntimeException('The file ' . $filename . ' cannot be opened.');
+            throw new \RuntimeException('The file ' . $filename . ' cannot be opened.', 1566823435);
         }
 
         return new Stream($resource);
@@ -33,6 +33,9 @@ final class StreamFactory implements StreamFactoryInterface
 
     public function createStreamFromResource($resource): StreamInterface
     {
+        if (!is_resource($resource) || get_resource_type($resource) !== 'stream') {
+            throw new \InvalidArgumentException('Invalid stream provided; must be a stream resource', 1566853697);
+        }
         return new Stream($resource);
     }
 }
