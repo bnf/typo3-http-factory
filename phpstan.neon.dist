@@ -8,6 +8,7 @@ parameters:
     - src
 
   ignoreErrors:
+    - ':Call to function is_resource.. with resource will always evaluate to true.:'
     # Incorrect annotations in typo3/cms-core
     - ':Parameter #1 .uri of class TYPO3.CMS.Core.Http.Request constructor expects string.null, Psr.Http.Message.UriInterface.string given.:'
     - ':Parameter #1 .uri of class TYPO3.CMS.Core.Http.ServerRequest constructor expects string.null, Psr.Http.Message.UriInterface.string given.:'
