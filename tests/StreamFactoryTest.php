@@ -109,6 +109,30 @@ class StreamFactoryTest extends TestCase
     /**
      * @test
      */
+    public function testCreateStreamFromFileWithInvalidMode()
+    {
+        $fileName = self::TEMP_FILE;
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionCode(1566823434);
+        $factory = new StreamFactory();
+        $factory->createStreamFromFile($fileName, 'z');
+    }
+
+    /**
+     * @test
+     */
+    public function testCreateStreamFromFileWithMissingFile()
+    {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionCode(1566823435);
+        $factory = new StreamFactory();
+        $factory->createStreamFromFile('unavailable_file.txt', 'r');
+    }
+
+    /**
+     * @test
+     */
     public function testCreateStreamFromResource()
     {
         $fileName = self::TEMP_FILE;
@@ -120,5 +144,18 @@ class StreamFactoryTest extends TestCase
         $factory = new StreamFactory();
         $stream = $factory->createStreamFromResource($resource);
         $this->assertSame('Foo', $stream->__toString());
+    }
+
+    /**
+     * @test
+     */
+    public function testCreateStreamResourceFromInvalidResource()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionCode(1566853697);
+        $resource = xml_parser_create();
+
+        $factory = new StreamFactory();
+        $factory->createStreamFromResource($resource);
     }
 }
