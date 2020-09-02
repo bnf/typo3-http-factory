@@ -4,7 +4,7 @@
 [![Build Status](https://api.travis-ci.org/bnf/typo3-http-factory.png?branch=master)](https://travis-ci.org/bnf/typo3-http-factory)
 [![Coverage Status](https://coveralls.io/repos/github/bnf/typo3-http-factory/badge.svg)](https://coveralls.io/github/bnf/typo3-http-factory)
 
-## Abandoned
+## Deprecated
 
 As of TYPO3 v10.2 this package is no longer required, as the factories have been
 [merged](https://review.typo3.org/c/Packages/TYPO3.CMS/+/61558) into TYPO3 core.

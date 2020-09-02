@@ -1,7 +1,6 @@
 {
     "name": "bnf/typo3-http-factory",
     "description": "PSR-17 HTTP message factories for the TYPO3 PSR-7 implementation",
-    "abandoned": true,
     "license": "GPL-2.0+",
     "keywords": ["psr-7", "psr-17"],
     "authors": [
